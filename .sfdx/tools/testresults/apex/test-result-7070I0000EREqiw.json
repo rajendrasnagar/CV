@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jul 26 2021 4:58:50 PM",
+    "testExecutionTimeInMs": 675,
+    "testTotalTimeInMs": 675,
+    "commandTimeInMs": 557,
+    "hostname": "https://rashi-dev-ed.my.salesforce.com",
+    "orgId": "00D280000015In1EAE",
+    "username": "rajendra_nagar@lightning.com",
+    "testRunId": "7070I0000EREqiw",
+    "userId": "00528000000YM82AAG"
+  },
+  "tests": [
+    {
+      "id": "07M0I000008ZU2iUAG",
+      "queueItemId": "7090I000000uUQoQAM",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "7070I0000EREqiwQQD",
+      "methodName": "updateContacts",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01p0I00000GBfh6QAD",
+        "name": "ContactsServiceTest",
+        "namespacePrefix": null,
+        "fullName": "ContactsServiceTest"
+      },
+      "runTime": 675,
+      "testTimestamp": "2021-07-26T11:28:53.000+0000",
+      "fullName": "ContactsServiceTest.updateContacts"
+    }
+  ]
+}

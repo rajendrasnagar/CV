@@ -1,0 +1,68 @@
+/**
+ * @description       : Find 1st recurring character in the string
+ * @author            : rajendra_singh.nagar@syngenta.com
+ * @last modified on  : 06-07-2021
+ * @last modified by  : rajendra_singh.nagar@syngenta.com
+ * Modifications Log 
+ * Ver   Date         Author                              Modification
+ * 1.0   05-31-2021   rajendra_singh.nagar@syngenta.com   Initial Version
+**/
+// ! Variation: Find 1st not recurring character.
+public inherited sharing class Google_1stRecurringChar {
+    /**
+     * * Approach 1: Naive one
+     * 1. Iterate over the String length. 
+     * 2. Get single character (i,i+1) and compare it with all characters on right.
+     * 3. If character matches, return the character else check rest.
+     * 4. If no character matches, pick next character in outer loop & check the rest characters.
+     * 4. In the last, return '-1'
+     * ! Time Complexity: n(n-1)/2 = O(n^2)
+     * ! Here we get first character who is repeated in the string. It Means in 'ABCCA', A will be the answer as A is repeated.
+     */
+     public String firstCharIterative(String stream){
+        // Add null checks here
+        Integer size = stream.length();
+        for(Integer i=0; i<size; i++){
+            String ith = stream.substring(i,i+1);
+            // extract single character from j to end of string to compare with ith character of string
+            for(Integer j=i+1; j<size;j++){
+                // extract single character
+                String jth = stream.substring(j,j+1);
+                if(ith==jth){
+                    return jth;
+                }
+            }
+            // if not found check for other iteration
+        }
+        // if not found return -1
+        return '-1';
+     }
+
+    /**
+     * * Approach 2:
+     * 1. Use Map & store key value pairs. Key will be the character & value will be the count of occurance.
+     * 2. Iterate over the characters and return store their occurance.
+     * 3. If character exists in map, return that character, else add it (make an entry) in the map.
+     * 4. In the last, return '-1'
+     * ! Time Complexity: O(n)
+     * ! Here, we get the first character which is actually repeated. It Means in 'ABCCA', C will be the answer.
+     * ? If we want same behaviour as above, Prepare complete map first & do re-iteration. It swould still be O(n) complex solution.
+     */
+    public String firstCharMap(String stream){
+        // Add null checks here
+        Map<String, Integer> occuranceCountMap = new Map<String, Integer>();
+        for(Integer i=0; i<stream.length();i++){
+            // get the character
+            String charAti = stream.substring(i,i+1);
+            if(occuranceCountMap.containsKey(charAti)){
+                // return the character
+                return charAti;
+            }else{
+                occuranceCountMap.put(charAti, 1);
+            }
+        }
+        // if no match, than return charAti
+        return '-1';
+    }
+    
+}

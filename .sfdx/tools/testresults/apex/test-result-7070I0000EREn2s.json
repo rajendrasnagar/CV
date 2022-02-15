@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jul 26 2021 3:34:19 PM",
+    "testExecutionTimeInMs": 707,
+    "testTotalTimeInMs": 707,
+    "commandTimeInMs": 533,
+    "hostname": "https://rashi-dev-ed.my.salesforce.com",
+    "orgId": "00D280000015In1EAE",
+    "username": "rajendra_nagar@lightning.com",
+    "testRunId": "7070I0000EREn2s",
+    "userId": "00528000000YM82AAG"
+  },
+  "tests": [
+    {
+      "id": "07M0I000008ZU1zUAG",
+      "queueItemId": "7090I000000uUQjQAM",
+      "stackTrace": "Class.ContactsAggregatorTest.testBatch: line 7, column 1",
+      "message": "System.DmlException: Insert failed. First exception on row 0; first error: CANNOT_INSERT_UPDATE_ACTIVATE_ENTITY, ContactTrigger: execution of AfterInsert\n\ncaused by: AccountsService.AccountsServiceException: Issue with updating Account records. Check with Admin. Update failed. First exception on row 0; first error: MISSING_ARGUMENT, Id not specified in an update call: []\n\nClass.AccountsService: line 19, column 1\nClass.ContactsService: line 12, column 1\nTrigger.ContactTrigger: line 6, column 1: []",
+      "asyncApexJobId": "7070I0000EREn2sQQD",
+      "methodName": "testBatch",
+      "outcome": "Fail",
+      "apexLogId": "07L0I000011yyk6UAA",
+      "apexClass": {
+        "id": "01p0I00000GBffFQAT",
+        "name": "ContactsAggregatorTest",
+        "namespacePrefix": null,
+        "fullName": "ContactsAggregatorTest"
+      },
+      "runTime": 707,
+      "testTimestamp": "2021-07-26T10:04:19.000+0000",
+      "fullName": "ContactsAggregatorTest.testBatch",
+      "diagnostic": {
+        "exceptionMessage": "System.DmlException: Insert failed. First exception on row 0; first error: CANNOT_INSERT_UPDATE_ACTIVATE_ENTITY, ContactTrigger: execution of AfterInsert\n\ncaused by: AccountsService.AccountsServiceException: Issue with updating Account records. Check with Admin. Update failed. First exception on row 0; first error: MISSING_ARGUMENT, Id not specified in an update call: []\n\nClass.AccountsService: line 19, column 1\nClass.ContactsService: line 12, column 1\nTrigger.ContactTrigger: line 6, column 1: []",
+        "exceptionStackTrace": "Class.ContactsAggregatorTest.testBatch: line 7, column 1",
+        "className": "ContactsAggregatorTest",
+        "compileProblem": "",
+        "lineNumber": 7,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": false
+    },
+    {
+      "path": "GoogleAlgo",
+      "default": true
+    }
+  ],
+  "name": "Google",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "51.0"
+}

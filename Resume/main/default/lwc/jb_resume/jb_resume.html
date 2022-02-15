@@ -1,0 +1,113 @@
+<template>
+    <div class="scrollArea">
+        <div data-id="navbar" class="navbar">
+            <a href="#default" data-id="logo" class="logo">【ＲＳＮ】</a>
+            <div data-id="navbar-right" class="navbar-right">
+                <a data-nav="menu" class="active" href="#home" data-id="home" onclick={navigateHere}>Intro</a>
+                <a data-nav="menu" href="#contact" data-id="contact" onclick={navigateHere}>Work</a>
+                <a data-nav="menu" href="#education" data-id="education" onclick={navigateHere}>Education</a>
+                <a data-nav="menu" href="#achivements" data-id="achivements" onclick={navigateHere}>Achivements</a>
+            </div>
+        </div>
+        <main class="scroll-container" onscroll={onScroll} onclick={show}>
+            <section data-id="section" id="home">
+                <div data-id="content" style="padding:15px 15px 25px;font-size:30px;height: 60vh;margin-top:30vh;">
+                    <div class="slds-page-header">
+                        <div class="slds-page-header__row">
+                            <div class="slds-page-header__col-title">
+                                <div class="slds-media">
+                                    <div class="slds-media__figure">
+                                        <span>
+                                            <img data-id="profilePhoto" src="" alt="Paris" width="300" height="300" style="border-radius: 20px">
+                                        </span>
+                                        <span class="slds-assistive-text">Rajendra Singh Nagar</span>
+                                    </div>
+                                    <div class="slds-p-left--medium">
+                                        <div class="slds-page-header__name">
+                                            <div class="slds-page-header__name-title">
+                                                <h1>
+                                                    <span class="slds-page-header__title slds-truncate slds-p-left--x-small">Rajendra Singh Nagar</span>
+                                                </h1>
+                                            </div>
+                                        </div>
+                                        <p class="slds-p-around_x-small" style="font-size: 14px;">Techincal Architect ☁, Syngenta</p>
+                                        <p class="slds-p-around_x-small" style="font-size: 14px;">📧: Rajendra.mitu06@gmail.com</p>
+                                        <p style="font-size: 20px;font-family: serif;" class="slds-p-around_x-small">
+                                            Hi there, My Name is Rajendra Singh Nagar. I am a Salesforce Professional working in the role of Technical Architect with Syngenta. With total & relevant experience of 10 years in Salesforce Platform, Product & Technologies, I have long working relationship with Salesforce Consulting companies like Accenture, Cognizant, Infosys. Currently, I am working with Product based company Syngenta where my responsibilities has evloved from a Sr. Developer to Technical Architect.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-id="SocialBar" class="SocialBar slds-p-right_x-large" style="visibility:hidden; transition: visibility 0s, opacity 0.5s linear;z-index=1">
+                    <template if:true={socials}>
+                        <lightning-layout horizontal-align="end">
+                            <template for:each={socials} for:item="social">
+                                <lightning-layout-item padding="around-small" key={social.Id}>
+                                    <a href={social.link} target="_blank">
+                                        <img src={social.imageIs} alt={social.accountType} width="40" height="40" class="slds-p-right--x-small" style="border-radius: 7px;">
+                                        <span key={social.Id} class="slds-color__text_gray-2">{social.accountType}</span>
+                                    </a>
+                                </lightning-layout-item>
+                            </template>
+                        </lightning-layout>
+                    </template>
+                </div>
+                <div data-id="SocialBarExpand" class="SocialBarExpand"  style="visibility:hidden; transition: visibility 0s, opacity 0.5s linear; ">
+                    <lightning-button-icon icon-name="utility:topic" alternative-text="Expand" title="Expand" variant="brand" size="small" onclick={expandSocial}></lightning-button-icon>
+                </div>
+            </section>
+            <section style="padding-top:100px;" id="contact">
+                <h2 data-id="section" class="slds-p-right_medium slds-text-align_right">Job Experiences (Total & Relevant): 10 Years</h2>
+                <div style="padding-left: 15px;">
+                    <div class="timeline">
+                        <div class="container left">
+                          <div class="content">
+                            <h2>2017</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                          <div class="content">
+                            <h2>2016</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                        <div class="container left">
+                          <div class="content">
+                            <h2>2015</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                          <div class="content">
+                            <h2>2012</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                        <div class="container left">
+                          <div class="content">
+                            <h2>2011</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                        <div class="container right">
+                          <div class="content">
+                            <h2>2007</h2>
+                            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </section>
+            <section data-id="section" style="padding-top:100px;" id="education">
+                <h2>Section 3</h2>
+            </section>
+            <section data-id="section" style="padding-top:100px;" id="achivements">
+                <h2>Section 4</h2>
+            </section>
+        </main>
+    </div>
+</template>
